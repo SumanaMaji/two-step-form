@@ -1,0 +1,195 @@
+:root{
+  --mainColor : #0090ad;
+  --lightColor : #f9ffff;
+  --borderColor : #ced4da;
+  --plainWhite : #ffffff;
+  --hoverColor : #004a59;
+  --dengerColor : #ff0000;
+}
+body {
+  background: var(--lightColor);
+  font-family: 'Josefin Sans', sans-serif;
+}
+.width50Per{
+  width: 50%;
+  padding: 50px 20px;
+}
+.innerFormSection {
+  padding: 50px 30px;
+  border: 1px solid var(--borderColor);
+  border-radius: 5px;
+  margin: 40px 0;
+  -webkit-box-shadow: 0px 0px 19px -6px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 19px -6px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 19px -6px rgba(0,0,0,0.75);
+  background-color: var(--plainWhite);
+}
+.formNavigrator{
+  display: flex;
+  justify-content: space-between;
+  max-width: 90%;
+  position: relative;
+  margin: 0 auto;
+}
+.formNavigrator::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: calc(100% - 80px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: #0090ad;
+  transition: .5s
+}
+.pcDisable::after{
+  transition: .5s;
+  background: #0090ad;
+  background: -moz-linear-gradient(left,  #0090ad 0%, #8be0de 100%);
+  background: -webkit-linear-gradient(left,  #0090ad 0%,#8be0de 100%);
+  background: linear-gradient(to right,  #0090ad 0%,#8be0de 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0090ad', endColorstr='#8be0de',GradientType=1 );
+}
+.formNavigrator .paginationCustom{
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0;
+  transition: .5s
+}
+.formNavigrator .paginationCustom span{
+  position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: sans-serif;
+}
+.formNavigrator .paginationCustom::after{
+  content: '';
+  width: 40px;
+  height: 40px;
+  background-color: #0090ad;
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  border-radius: 50%;
+}
+.pcDisable .paginationCustom:nth-child(2)::after{
+  opacity: .5;
+}
+.form-label{
+  font-size: 25px;
+}
+.form-control {
+    padding: 0.75rem 1rem;
+    font-size: 1.5rem;
+}
+.buttonRow button{
+  width: 100%;
+  background-color: var(--mainColor);
+}
+.buttonRow button:hover{
+  background-color: var(--hoverColor);
+}
+.btn-primary.disabled, .btn-primary:disabled{
+  background-color: var(--mainColor);
+}
+.testText h2{
+  font-size: 20px;
+}
+.pesonName h2{
+  color: var(--mainColor);
+  font-size: 22px;
+}
+.mouseTestButtonBlock button{
+  width: 100%;
+  background-color: var(--mainColor);
+  color: var(--plainWhite);
+}
+.mouseTestButtonBlock button:hover{
+  background-color: var(--mainColor);
+}
+.infoIcons {
+  color: var(--dengerColor);
+}
+.mouseTestButtonBlock p{
+  font-size: 14px;
+  margin-bottom: 0;
+  margin-top: 10px;
+  text-align: center;
+}
+.testingSection {
+  border: 1px solid var(--borderColor);
+  border-radius: 5px;
+  padding: 20px;
+}
+.testText h2 {
+  text-align: center;
+  border-bottom: 1px solid var(--borderColor);
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+}
+.mouseScrollSection {
+  width: 100%;
+  height: 150px;
+  background-color: #000;
+  border-radius: 5px;
+}
+.mouseScrollEve {
+  margin: 15px 0;
+}
+.mouseScrollEve p{
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.popup-content {
+  border: 1px solid #464545;
+  color: rgb(255, 0, 0);
+  -webkit-box-shadow: 0px 0px 23px -8px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 23px -8px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 23px -8px rgba(0,0,0,0.75);
+}  
+.popup-content svg{
+  color: rgb(255, 0, 0);
+}  
+
+
+.modal_ew {
+  font-size: 12px;
+}
+.modal_ew > .header {
+  width: 100%;
+  border-bottom: 1px solid gray;
+  font-size: 18px;
+  text-align: center;
+  padding: 5px;
+}
+.modal_ew > .content {
+  width: 100%;
+  padding: 10px 5px;
+}
+.modal_ew > .actions {
+  width: 100%;
+  padding: 10px 5px;
+  margin: auto;
+  text-align: center;
+}
+.modal_ew > .close {
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  padding: 2px 5px;
+  line-height: 20px;
+  right: -10px;
+  top: -10px;
+  font-size: 24px;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #cfcece;
+}
